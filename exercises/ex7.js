@@ -10,6 +10,19 @@ Not sure where to get started? It might be useful to start by creating a variabl
 
 const checkAir = function (samples, threshold) {
   // Code here!
+  let counter = 0;
+  let result = 0;
+  for(let i = 0; i <= samples.length; i++){
+    if( samples[i] == "dirty"){
+      counter++;
+    }
+  }
+  result = counter/samples.length;
+  if(threshold > result){
+    return console.log("Clean");
+  }else{
+    return console.log("Polluted");
+  }
 };
 
 console.log(checkAir(
