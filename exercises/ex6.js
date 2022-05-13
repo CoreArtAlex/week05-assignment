@@ -22,30 +22,40 @@ Note: There may be multiple available spots for a particular vehicle. It does no
 const whereCanIPark = function (spots, vehicle) {
   // Code here!
   let foundParking = false;
-  for(let x = 0; x < spots[0][0].length; x++){
-    for(let y = 0; y < spots.length; y++){
-      spots[x][y].toLowerCase();
-      switch (vehicle){
-        case "regular":
+  switch (vehicle){
+    case "regular":
+      for(let x = 0; x <= spots[0][0].length; x++){
+        for(let y = 0; y <= spots.length; y++){
+          // spots[x][y].toLowerCase();
           if(spots[x][y] == "r"){
             foundParking = true;
             return console.log(vehicle + "," + spots[x][y]);
           }
-          break;
-        case "small":
+        }
+      }
+      break;
+    case "small":
+      for(let x = 0; x <= spots[0][0].length; x++){
+        for(let y = 0; y <= spots.length; y++){
+          // spots[x][y].toLowerCase();
           if(spots[x][y] == "s"){
             foundParking = true;
             return console.log(vehicle + "," + spots[x][y]);
           }
-          break;
-        case "motorcycle":
+        }
+      }
+      break;
+    case "motorcycle":
+      for(let x = 0; x <= spots[0][0].length; x++){
+        for(let y = 0; y <= spots.length; y++){
+          // spots[x][y].toLowerCase();
           if(spots[x][y] == "m"){
             foundParking = true;
             return console.log(vehicle + "," + spots[x][y]);
           }
-          break;
-      }
-    }
+        }
+      }  
+      break;
   }
   if(foundParking = false){
     console.log(vehicle + "," + "Spot Unavailable")
@@ -86,4 +96,4 @@ console.log(whereCanIPark(
     ['S', 'r', 'S', 'M', 'm', 'S']
   ],
   'motorcycle'
-)) // [3, 1]
+)); // [3, 1]
