@@ -21,6 +21,35 @@ Note: There may be multiple available spots for a particular vehicle. It does no
 
 const whereCanIPark = function (spots, vehicle) {
   // Code here!
+  let foundParking = false;
+  for(let x = 0; x < spots[0][0].length; x++){
+    for(let y = 0; y < spots.length; y++){
+      spots[x][y].toLowerCase();
+      switch (vehicle){
+        case "regular":
+          if(spots[x][y] == "r"){
+            foundParking = true;
+            return console.log(vehicle + "," + spots[x][y]);
+          }
+          break;
+        case "small":
+          if(spots[x][y] == "s"){
+            foundParking = true;
+            return console.log(vehicle + "," + spots[x][y]);
+          }
+          break;
+        case "motorcycle":
+          if(spots[x][y] == "m"){
+            foundParking = true;
+            return console.log(vehicle + "," + spots[x][y]);
+          }
+          break;
+      }
+    }
+  }
+  if(foundParking = false){
+    console.log(vehicle + "," + "Spot Unavailable")
+  }
 };
 
 console.log(whereCanIPark(
