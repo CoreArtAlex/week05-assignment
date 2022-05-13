@@ -25,7 +25,7 @@ const urlEncode = function(text) {
       if(text[i] == " "){
         result.concat("%20");
       }else{
-        result.concat(text[i]);
+        result.concat(text.charAt(i));
       }
     }
     return console.log(result);
