@@ -21,6 +21,7 @@ const sumLargestNumbers = function(data) {
                 largestNumTwo = data[i];
             }
         }
+
         sumLargestNums = largestNumOne + largestNumTwo;
         return sumLargestNums;
     } else{
