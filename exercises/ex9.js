@@ -8,13 +8,13 @@ Instruction
 Create a function named camelCase that will convert a string to camel case, and return the result.
 */
 
-Input
+// Input
 const camelCase = function(input) {
   // Your code here
   input.toLowerCase();
   for(let i = 0; i <= input.length; i++){
-    if(input(i).match(/\s/g)){
-      input(i + 1).toUpperCase();
+    if(input[i].match(/\s/g)){
+      input[i + 1].toUpperCase();
       input.slice(i, i +1);
     }
   }
